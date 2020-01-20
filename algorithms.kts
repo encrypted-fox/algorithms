@@ -58,14 +58,17 @@ fun customToString(array: Array<Int>): String {
     return string
 }
 
-var array = arrayOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
+var firstTestArray = arrayOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
+var secondTestArray = arrayOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
 
 println("Testing insertion sort")
 println("______________________")
-println(customToString(insertionSort(array)))
+println(customToString(insertionSort(firstTestArray, true)))
+println(customToString(insertionSort(firstTestArray)))
 println("______________________")
 
 println("Testing selection sort")
 println("______________________")
-println(customToString(selectionSort(array)))
+println(customToString(selectionSort(firstTestArray, true)))
+println(customToString(selectionSort(firstTestArray)))
 println("______________________")
