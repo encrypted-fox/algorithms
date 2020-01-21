@@ -46,7 +46,7 @@ function selectionSort(array, descendingOrder = false) {
     return array;
 }
 
-function mergeSort(array, descending_order = false) {
+function mergeSort(array, descendingOrder = false) {
     if (array.length > 1) {
         let mid = array.length / 2;
         let left_array = array.slice(0, mid);
@@ -82,7 +82,7 @@ function mergeSort(array, descending_order = false) {
             k += 1;
         }
     }
-    if (descending_order) {
+    if (descendingOrder) {
         return array.reverse();
     } else {
         return array
