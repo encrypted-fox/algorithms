@@ -20,11 +20,11 @@ fun insertionSort(array: Array<Int>, descendingOrder: Boolean = false): Array<In
     return array
 }
 
-fun selectionSort(array: Array<Int>, descending_order: Boolean = false): Array<Int> {
+fun selectionSort(array: Array<Int>, descendingOrder: Boolean = false): Array<Int> {
     for (i in 0..array.size - 1) {
         var m = i
         var j = i + 1
-        if (descending_order) {
+        if (descendingOrder) {
             while (j < array.size) {
                 if (array[j] > array[m]) {
                     m = j
