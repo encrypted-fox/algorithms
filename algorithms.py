@@ -68,6 +68,18 @@ def merge_sort(array, descending_order=False):
         return array
 
 
+def bubble_sort(array, descending_order=False):
+    for i in range(len(array) - 1):
+        for j in range(len(array) - i - 1):
+            if descending_order:
+                if array[j] < array[j + 1]:
+                    array[j], array[j + 1] = array[j + 1], array[j]
+            else:
+                if array[j] > array[j + 1]:
+                    array[j], array[j + 1] = array[j + 1], array[j]
+    return array
+
+
 def test():
     print("Testing insertion sort")
     print("______________________")
@@ -93,6 +105,13 @@ def test():
     print(merge_sort(["a", "b", "d", "a", "h", "a"], True))
     print("______________________")
 
+    print("Testing bubble sort")
+    print("______________________")
+    print(bubble_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
+    print(bubble_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
+    print(bubble_sort(["a", "b", "d", "a", "h", "a"]))
+    print(bubble_sort(["a", "b", "d", "a", "h", "a"], True))
+    print("______________________")
+
 
 test()
-
