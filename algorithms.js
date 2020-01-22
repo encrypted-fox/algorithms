@@ -89,6 +89,27 @@ function mergeSort(array, descendingOrder = false) {
     }
 }
 
+function bubbleSort(array, descendingOrder = false) {
+    for (let i = 0; i < array.length - 1; i++) {
+        for (let j = 0; j < array.length - i - 1; j++) {
+            if (descendingOrder) {
+                if (array[j] < array[j + 1]) {
+                    let buffer = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = buffer;
+                }
+            } else {
+                if (array[j] > array[j + 1]) {
+                    let buffer = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = buffer;
+                }
+            }
+        }
+    }
+    return array;
+}
+
 function test() {
     console.log("Testing insertion sort");
     console.log("______________________");
@@ -112,6 +133,14 @@ function test() {
     console.log(mergeSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
     console.log(mergeSort(["a", "b", "d", "a", "h", "a"]));
     console.log(mergeSort(["a", "b", "d", "a", "h", "a"], true));
+    console.log("______________________");
+
+    console.log("Testing bubble sort");
+    console.log("______________________");
+    console.log(bubbleSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
+    console.log(bubbleSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
+    console.log(bubbleSort(["a", "b", "d", "a", "h", "a"]));
+    console.log(bubbleSort(["a", "b", "d", "a", "h", "a"], true));
     console.log("______________________");
 }
 
