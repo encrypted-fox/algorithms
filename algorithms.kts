@@ -86,37 +86,41 @@ fun mergeSort(list: List<Int>): List<Int> {
     return merge(mergeSort(left), mergeSort(right))
 }
 
-fun customToString(array: Array<Int>): String {
-    var string = ""
-    for (i in array) {
-        if (string == "") {
-            string += i
-        } else {
-            string += ", " + i
+fun test() {
+    fun customToString(array: Array<Int>): String {
+        var string = ""
+        for (i in array) {
+            if (string == "") {
+                string += i
+            } else {
+                string += ", " + i
+            }
         }
+        return string
     }
-    return string
+
+    val firstTestArray = arrayOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
+    val secondTestArray = arrayOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
+    val firstTestList = mutableListOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
+    val secondTestList = mutableListOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
+
+    println("Testing insertion sort")
+    println("______________________")
+    println(customToString(insertionSort(firstTestArray, true)))
+    println(customToString(insertionSort(secondTestArray)))
+    println("______________________")
+
+    println("Testing selection sort")
+    println("______________________")
+    println(customToString(selectionSort(firstTestArray, true)))
+    println(customToString(selectionSort(secondTestArray)))
+    println("______________________")
+
+    println("Testing merge sort")
+    println("______________________")
+    println(mergeSort(firstTestList))
+    println(mergeSort(secondTestList))
+    println("______________________")
 }
 
-var firstTestArray = arrayOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
-var secondTestArray = arrayOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
-var firstTestList = mutableListOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
-var secondTestList = mutableListOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
-
-println("Testing insertion sort")
-println("______________________")
-println(customToString(insertionSort(firstTestArray, true)))
-println(customToString(insertionSort(secondTestArray)))
-println("______________________")
-
-println("Testing selection sort")
-println("______________________")
-println(customToString(selectionSort(firstTestArray, true)))
-println(customToString(selectionSort(secondTestArray)))
-println("______________________")
-
-println("Testing merge sort")
-println("______________________")
-println(mergeSort(firstTestList))
-println(mergeSort(secondTestList))
-println("______________________")
+test()
