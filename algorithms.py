@@ -68,26 +68,31 @@ def merge_sort(array, descending_order=False):
         return array
 
 
-print("Testing insertion sort")
-print("______________________")
-print(insertion_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
-print(insertion_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
-print(insertion_sort(["a", "b", "d", "a", "h", "a"]))
-print(insertion_sort(["a", "b", "d", "a", "h", "a"], True))
-print("______________________")
+def test():
+    print("Testing insertion sort")
+    print("______________________")
+    print(insertion_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
+    print(insertion_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
+    print(insertion_sort(["a", "b", "d", "a", "h", "a"]))
+    print(insertion_sort(["a", "b", "d", "a", "h", "a"], True))
+    print("______________________")
 
-print("Testing selection sort")
-print("______________________")
-print(selection_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
-print(selection_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
-print(selection_sort(["a", "b", "d", "a", "h", "a"]))
-print(selection_sort(["a", "b", "d", "a", "h", "a"], True))
-print("______________________")
+    print("Testing selection sort")
+    print("______________________")
+    print(selection_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
+    print(selection_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
+    print(selection_sort(["a", "b", "d", "a", "h", "a"]))
+    print(selection_sort(["a", "b", "d", "a", "h", "a"], True))
+    print("______________________")
 
-print("Testing merge sort")
-print("______________________")
-print(merge_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
-print(merge_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
-print(merge_sort(["a", "b", "d", "a", "h", "a"]))
-print(merge_sort(["a", "b", "d", "a", "h", "a"], True))
-print("______________________")
+    print("Testing merge sort")
+    print("______________________")
+    print(merge_sort([5, 3, 4, 2, 1, 2, 3, 5, 2], True))
+    print(merge_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
+    print(merge_sort(["a", "b", "d", "a", "h", "a"]))
+    print(merge_sort(["a", "b", "d", "a", "h", "a"], True))
+    print("______________________")
+
+
+test()
+
