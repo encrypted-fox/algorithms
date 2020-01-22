@@ -86,6 +86,27 @@ fun mergeSort(list: List<Int>): List<Int> {
     return merge(mergeSort(left), mergeSort(right))
 }
 
+fun bubbleSort(array: Array<Int>, descendingOrder: Boolean = false): Array<Int> {
+    for (i in 0..array.size - 2) {
+        for (j in 0..(array.size - i - 2)) {
+            if (descendingOrder) {
+                if (array[j] < array[j + 1]) {
+                    val buffer = array[j]
+                    array[j] = array[j + 1]
+                    array[j + 1] = buffer
+                }
+            } else {
+                if (array[j] > array[j + 1]) {
+                    val buffer = array[j]
+                    array[j] = array[j + 1]
+                    array[j + 1] = buffer
+                }
+            }
+        }
+    }
+    return array
+}
+
 fun test() {
     fun customToString(array: Array<Int>): String {
         var string = ""
@@ -120,6 +141,12 @@ fun test() {
     println("______________________")
     println(mergeSort(firstTestList))
     println(mergeSort(secondTestList))
+    println("______________________")
+
+    println("Testing bubble sort")
+    println("______________________")
+    println(customToString(bubbleSort(firstTestArray, true)))
+    println(customToString(bubbleSort(secondTestArray)))
     println("______________________")
 }
 
