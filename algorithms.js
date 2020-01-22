@@ -89,26 +89,30 @@ function mergeSort(array, descendingOrder = false) {
     }
 }
 
-console.log("Testing insertion sort");
-console.log("______________________");
-console.log(insertionSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
-console.log(insertionSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
-console.log(insertionSort(["a", "b", "d", "a", "h", "a"]));
-console.log(insertionSort(["a", "b", "d", "a", "h", "a"], true));
-console.log("______________________");
+function test() {
+    console.log("Testing insertion sort");
+    console.log("______________________");
+    console.log(insertionSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
+    console.log(insertionSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
+    console.log(insertionSort(["a", "b", "d", "a", "h", "a"]));
+    console.log(insertionSort(["a", "b", "d", "a", "h", "a"], true));
+    console.log("______________________");
 
-console.log("Testing selection sort");
-console.log("______________________");
-console.log(selectionSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
-console.log(selectionSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
-console.log(selectionSort(["a", "b", "d", "a", "h", "a"]));
-console.log(selectionSort(["a", "b", "d", "a", "h", "a"]), true);
-console.log("______________________");
+    console.log("Testing selection sort");
+    console.log("______________________");
+    console.log(selectionSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
+    console.log(selectionSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
+    console.log(selectionSort(["a", "b", "d", "a", "h", "a"]));
+    console.log(selectionSort(["a", "b", "d", "a", "h", "a"]), true);
+    console.log("______________________");
 
-console.log("Testing merge sort");
-console.log("______________________");
-console.log(mergeSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
-console.log(mergeSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
-console.log(mergeSort(["a", "b", "d", "a", "h", "a"]));
-console.log(mergeSort(["a", "b", "d", "a", "h", "a"], true));
-console.log("______________________");
+    console.log("Testing merge sort");
+    console.log("______________________");
+    console.log(mergeSort([5, 3, 4, 2, 1, 2, 3, 5, 2], true));
+    console.log(mergeSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
+    console.log(mergeSort(["a", "b", "d", "a", "h", "a"]));
+    console.log(mergeSort(["a", "b", "d", "a", "h", "a"], true));
+    console.log("______________________");
+}
+
+test();
