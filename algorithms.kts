@@ -107,6 +107,18 @@ fun bubbleSort(array: Array<Int>, descendingOrder: Boolean = false): Array<Int> 
     return array
 }
 
+fun findMaxSubarray(array: Array<Int>): Int {
+    var best_sum = 0
+    var current_sum = 0
+
+    for (element in array) {
+        current_sum = maxOf(0, current_sum + element)
+        best_sum = maxOf(best_sum, current_sum)
+    }
+
+    return best_sum
+}
+
 fun test() {
     fun customToString(array: Array<Int>): String {
         var string = ""
@@ -124,6 +136,8 @@ fun test() {
     val secondTestArray = arrayOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
     val firstTestList = mutableListOf(5, 3, 4, 2, 1, 2, 3, 5, 2)
     val secondTestList = mutableListOf(1, 2, 4, 2, 2, 1, 5, 6, 6, 9)
+    val firstArrayForMaxSubarrTest = arrayOf(5, 3, -4, 2, 1, -2, 3, 5, 2)
+    val secondArrayForMaxSubarrTest = arrayOf(1, 2, -4, 2, 2, -1, 5, 6, 6, 9)
 
     println("Testing insertion sort")
     println("______________________")
@@ -147,6 +161,12 @@ fun test() {
     println("______________________")
     println(customToString(bubbleSort(firstTestArray, true)))
     println(customToString(bubbleSort(secondTestArray)))
+    println("______________________")
+
+    println("Testing find maximum subarray")
+    println("______________________")
+    println(findMaxSubarray(firstArrayForMaxSubarrTest))
+    println(findMaxSubarray(secondArrayForMaxSubarrTest))
     println("______________________")
 }
 
