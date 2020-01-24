@@ -80,6 +80,26 @@ def bubble_sort(array, descending_order=False):
     return array
 
 
+def find_max_subarray(array):
+    best_sum = 0
+    best_start = best_end = 0
+    current_sum = 0
+
+    for current_end, x in enumerate(array):
+        if current_sum <= 0:
+            current_start = current_end
+            current_sum = x
+        else:
+            current_sum += x
+
+        if current_sum > best_sum:
+            best_sum = current_sum
+            best_start = current_start
+            best_end = current_end + 1
+
+    return best_sum, best_start, best_end
+
+
 def test():
     print("Testing insertion sort")
     print("______________________")
@@ -111,6 +131,12 @@ def test():
     print(bubble_sort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
     print(bubble_sort(["a", "b", "d", "a", "h", "a"]))
     print(bubble_sort(["a", "b", "d", "a", "h", "a"], True))
+    print("______________________")
+
+    print("Testing find maximum subarray")
+    print("______________________")
+    print(find_max_subarray([5, 3, 4, 2, 1, 2, 3, 5, 2]))
+    print(find_max_subarray([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
     print("______________________")
 
 
