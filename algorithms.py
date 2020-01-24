@@ -135,8 +135,8 @@ def test():
 
     print("Testing find maximum subarray")
     print("______________________")
-    print(find_max_subarray([5, 3, 4, 2, 1, 2, 3, 5, 2]))
-    print(find_max_subarray([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]))
+    print(find_max_subarray([5, 3, -4, 2, 1, -2, 3, 5, 2]))
+    print(find_max_subarray([1, 2, -4, 2, 2, -1, 5, 6, 6, 9]))
     print("______________________")
 
 
