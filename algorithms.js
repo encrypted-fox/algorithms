@@ -110,6 +110,18 @@ function bubbleSort(array, descendingOrder = false) {
     return array;
 }
 
+function findMaxSubarray(array) {
+    let best_sum = 0;
+    let current_sum = 0;
+
+    for (let i = 0; i < array.length; i += 1) {
+        current_sum = Math.max(0, current_sum + array[i]);
+        best_sum = Math.max(best_sum, current_sum);
+    }
+
+    return best_sum;
+}
+
 function test() {
     console.log("Testing insertion sort");
     console.log("______________________");
@@ -141,6 +153,12 @@ function test() {
     console.log(bubbleSort([1, 2, 4, 2, 2, 1, 5, 6, 6, 9]));
     console.log(bubbleSort(["a", "b", "d", "a", "h", "a"]));
     console.log(bubbleSort(["a", "b", "d", "a", "h", "a"], true));
+    console.log("______________________");
+
+    console.log("Testing find maximum subarray");
+    console.log("______________________");
+    console.log(findMaxSubarray([5, 3, -4, 2, 1, -2, 3, 5, 2]));
+    console.log(findMaxSubarray([1, 2, -4, 2, 2, -1, 5, 6, 6, 9]));
     console.log("______________________");
 }
 
